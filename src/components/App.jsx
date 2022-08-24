@@ -14,9 +14,12 @@ export class App extends Component {
 
   componentDidMount(){
     try{
-    const json = localStorage.getItem('contacts');
-    const contacts = JSON.parse(json);
-    this.setState(()=>({contacts}));
+      const json = localStorage.getItem('contacts');
+      const contacts = JSON.parse(json);
+
+      if(contacts){
+        this.setState(()=>({contacts}));
+      }
   } catch (error){
     console.log(error);
   }};
