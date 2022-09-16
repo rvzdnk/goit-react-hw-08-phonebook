@@ -1,11 +1,13 @@
 import styles from './Filter.module.css'
 
-export const Filter = ({searchByName}) => {
-  const {filter} = styles;
+export const Filter = ({ filter, onFilter}) => {
+  const {filter_input} = styles;
     return (
-      <input className={filter}
+      <input className={filter_input}
         type="text"
-        onChange={searchByName}
+        name="filter"
+        value={ filter }
+        onChange={onFilter}
         placeholder="Find contacts by name"
       />
     );
