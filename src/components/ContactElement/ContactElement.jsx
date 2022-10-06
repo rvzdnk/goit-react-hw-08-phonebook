@@ -9,7 +9,7 @@ export const ContactElement = ({ id, name, number }) => {
     return (
         <li className={list__item} key={id}>
             <span className={list__name}>{name}:</span> {number}
-            <button className={list__btn} onClick={() => deleteItem(id)}>
+            <button className={list__btn} onClick={() => { deleteItem(id); }}>
                 ⛌
             </button>
         </li>
