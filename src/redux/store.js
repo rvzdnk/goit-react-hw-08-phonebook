@@ -5,7 +5,7 @@ import filterReducer from './filterSlice';
 
 export const store = configureStore({
   reducer: {
-    filtet: filterReducer,
+    filter: filterReducer,
     [api.reducerPath]: api.reducer,
   },
   middleware: getDefaultMiddleware =>

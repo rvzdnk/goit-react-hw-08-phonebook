@@ -1,0 +1,22 @@
+.list__btn {
+    margin: 0 20px;
+    background-color: violet;
+    color: yellow;
+    font-weight: bold;
+    border: 2px solid yellow;
+    padding: 3px;
+}
+
+.list__item {
+    margin: 10px 0;
+    color: yellow;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list__name {
+    color: violet;
+    padding: 0 5px 0 0;
+}
