@@ -6,6 +6,7 @@ export const Filter = () => {
   const dispatch = useDispatch();
 
   const onFilter = e => {
+    e.preventDefault();
     const value = e.target.value.toLowerCase();
     dispatch(filterContacts(value))
   };
