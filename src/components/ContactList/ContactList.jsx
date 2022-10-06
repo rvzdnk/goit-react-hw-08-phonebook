@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import { useGetContactsQuery, useDeleteContactMutation } from 'services/api';
 import styles from './ContactList.module.css';
+import { Loader } from '../Loader/Loader'
 
 const ContactList = () => {
 
@@ -24,8 +25,10 @@ const ContactList = () => {
     return (
         <div>
             {isLoading && <Loader />}
+            {isSuccess &&
+                (contacts?.length > 0 ? (
                 <ul className={list}>
-                    {contactsList.map(({ name, number, id }) => {
+                    {contacts.map(({ name, number, id }) => {
                         return (
                             <li className={list__item} key={id}>
                                 <span className={list__name}>{name}:</span> {number}
@@ -36,6 +39,10 @@ const ContactList = () => {
                         );
                     })}
                 </ul>
+            ) : (
+                <p className={contactsList}> No contacts available </p>
+                ))}
+            {isError && <p className={contactsList}> Error: {error} </p>}
         </div>
     );
 };
