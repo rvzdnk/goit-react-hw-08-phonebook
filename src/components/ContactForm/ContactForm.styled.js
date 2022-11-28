@@ -1,10 +1,13 @@
-.form{
+import styled from 'styled-components';
+
+
+export const Form = styled.form`{
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+}`;
 
-.form__label{
+export const Label = styled.label`{
     margin: 20px 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 700;
@@ -14,23 +17,22 @@
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: violet;
     letter-spacing: 0.05em;
-}
+}`;
 
-.form__input{
+export const Input = styled.input`{
     height: 40px;
     border: 2px solid violet;
     padding-left: 10px;
     color: violet;
     background-color: yellow;
-}
+        &:hover{
+            border: 4px solid yellow;
+            color: yellow;
+            background-color: violet;
+        }
+}`;
 
-.form__input:hover{
-    border: 4px solid yellow;
-    color: yellow;
-    background-color: violet;
-}
-
-.form__btn{
+export const Button = styled.button`{
     margin: 30px;
     font-size: 20px;
     padding: 10px 20px;
@@ -39,12 +41,12 @@
     border: 2px solid yellow;
     text-transform: uppercase;
     font-weight: bold;
-}
+        &:hover{
+            border: 2px solid violet;
+            padding-left: 10px;
+            color: violet;
+            background-color: yellow;
+            padding: 20px 30px;
+        }
+}`;
 
-.form__btn:hover{
-    border: 2px solid violet;
-    padding-left: 10px;
-    color: violet;
-    background-color: yellow;
-    padding: 20px 30px;
-}

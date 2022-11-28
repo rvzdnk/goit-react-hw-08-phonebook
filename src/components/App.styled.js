@@ -11,4 +11,4 @@ width: 100vw;
 height: 100vw;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 font-weight: 700;
-`
+`;

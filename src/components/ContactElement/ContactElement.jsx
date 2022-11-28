@@ -1,18 +1,17 @@
 import { useDeleteContactMutation } from '../../services/phonebookApi';
-import styles from './ContactElement.module.css';
+import { List, ListItem, ListButton } from './ContactElement.styled'
 
 const ContactElement = ({ id, name, number }) => {
 
     const [deleteItem] = useDeleteContactMutation();
-    const { list__btn, list__item, list__name } = styles;
 
     return (
-        <li className={list__item} key={id}>
-            <span className={list__name}>{name}:</span> {number}
-            <button className={list__btn} onClick={() => { deleteItem(id); }}>
+        <List key={id}>
+            <ListItem>{name}:</ListItem> {number}
+            <ListButton onClick={() => { deleteItem(id); }}>
                 ⛌
-            </button>
-        </li>
+            </ListButton>
+        </List>
     );
 };
 

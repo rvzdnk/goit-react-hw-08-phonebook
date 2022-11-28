@@ -1,5 +1,5 @@
 import { nanoid } from 'nanoid';
-import styles from './ContactForm.module.css';
+import { Form, Input, Label, Button} from './ContactForm.styled';
 import { useAddContactMutation, useGetContactsQuery } from '../../services/phonebookApi';
 
 
@@ -30,12 +30,10 @@ const ContactForm = () => {
     }
   };
 
-  const {form, form__btn, form__input, form__label}=styles
-
   return (
-    <form className={form} onSubmit={handleSubmit}>
-      <label className={form__label} htmlFor="name">Name</label>
-      <input className={form__input}
+    <Form onSubmit={handleSubmit}>
+      <Label htmlFor="name">Name</Label>
+      <Input
         type="text"
         name="name"
         id="name"
@@ -44,8 +42,8 @@ const ContactForm = () => {
         title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
         required
       />
-      <label className={form__label} htmlFor="number">Number</label>
-      <input className={form__input}
+      <Label htmlFor="number">Number</Label>
+      <Input
         type="tel"
         name="number"
         id="number"
@@ -54,8 +52,8 @@ const ContactForm = () => {
         title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
         required
       />
-      <button className={form__btn} type="submit">Add contact</button>
-    </form>
+      <Button type="submit">Add contact</Button>
+    </Form>
   );
 }
 

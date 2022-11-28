@@ -2,7 +2,7 @@ import Loader from '../Loader/Loader';
 import ContactElement from '../ContactElement/ContactElement';
 import { useSelector } from 'react-redux';
 import { useGetContactsQuery} from '../../services/phonebookApi';
-import styles from './ContactList.module.css';
+import {List, Message} from './ContactList.styled.js';
 
 
 const ContactList = () => {
@@ -21,22 +21,20 @@ const ContactList = () => {
         .filter(cont => cont.name.toLowerCase().includes(filter))
         .sort((first, second) => first.name.localeCompare(second.name));
 
-
-    const { list } = styles;
     return (
         <div>
             {isLoading && <Loader />}
             {isSuccess &&
                 (contacts?.length > 0 ? (
-                <ul className={list}>
+                <List>
                     {contactsList.map(({ name, number, id }) => {
                         return <ContactElement key={id} id={id} name={name} number={number}/>
                     })}
-                </ul>
+                </List>
             ) : (
-                <p className={list}> No contacts available </p>
+                <Message> No contacts available </Message>
                 ))}
-            {isError && <p className={list}> Error: {error} </p>}
+            {isError && <Message> Error: {error} </Message>}
         </div>
     );
 };
