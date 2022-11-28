@@ -1,8 +1,9 @@
+import Loader from '../Loader/Loader';
+import ContactElement from '../ContactElement/ContactElement';
 import { useSelector } from 'react-redux';
-import { useGetContactsQuery} from 'services/api';
+import { useGetContactsQuery} from '../../services/phonebookApi';
 import styles from './ContactList.module.css';
-import { Loader } from '../Loader/Loader'
-import { ContactElement } from 'components/ContactElement/ContactElement';
+
 
 const ContactList = () => {
 

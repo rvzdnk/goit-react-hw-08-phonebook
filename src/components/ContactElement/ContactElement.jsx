@@ -1,7 +1,7 @@
-import { useDeleteContactMutation } from 'services/api';
+import { useDeleteContactMutation } from '../../services/phonebookApi';
 import styles from './ContactElement.module.css';
 
-export const ContactElement = ({ id, name, number }) => {
+const ContactElement = ({ id, name, number }) => {
 
     const [deleteItem] = useDeleteContactMutation();
     const { list__btn, list__item, list__name } = styles;
@@ -15,3 +15,5 @@ export const ContactElement = ({ id, name, number }) => {
         </li>
     );
 };
+
+export default ContactElement;

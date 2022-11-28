@@ -1,14 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { api } from 'services/api';
+import { phonebookApi } from 'services/phonebookApi';
 
-import filterReducer from './filterSlice';
+import { filterReducer, tokenReducer } from './Reducers';
 
 export const store = configureStore({
   reducer: {
     filter: filterReducer,
-    [api.reducerPath]: api.reducer,
+    token: tokenReducer,
+    [phonebookApi.reducerPath]: phonebookApi.reducer,
   },
   middleware: getDefaultMiddleware =>
-    getDefaultMiddleware().concat(api.middleware),
+    getDefaultMiddleware().concat(phonebookApi.middleware),
 });
 
