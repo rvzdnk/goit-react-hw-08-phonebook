@@ -2,8 +2,8 @@ import Cookies from 'js-cookie';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { addToken } from 'redux/Actions';
-import { useLoginMutation } from 'services/phonebookApi';
+import { addToken } from '../../redux/Actions';
+import { useLoginMutation } from '../../services/phonebookApi';
 import { LoginForm } from './Login.styled';
 import { toast } from 'react-toastify';
 

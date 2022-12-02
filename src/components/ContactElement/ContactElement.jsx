@@ -1,4 +1,4 @@
-import { useDeleteContactMutation } from 'services/phonebookApi';
+import { useDeleteContactMutation } from '../../services/phonebookApi';
 import { List, ListItem, ListButton } from './ContactElement.styled'
 
 const ContactElement = ({ id, name, number }) => {

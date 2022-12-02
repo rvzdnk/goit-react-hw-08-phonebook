@@ -1,4 +1,4 @@
-import AppDescription from 'components/AppDescription/AppDescription';
+import AppDescription from '../../components/AppDescription/AppDescription';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { ForwardingLink, Section } from './Home.styled';

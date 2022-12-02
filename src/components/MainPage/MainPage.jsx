@@ -2,8 +2,8 @@ import Cookies from 'js-cookie';
 import { React } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { deleteToken } from 'redux/Actions';
-import { useLogoutMutation } from 'services/phonebookApi';
+import { deleteToken } from '../../redux/Actions';
+import { useLogoutMutation } from '../../services/phonebookApi';
 import { Header, PageTitle, StyledLink, } from './MainPage.styled';
 
 function MainPage() {

@@ -1,6 +1,6 @@
 import { nanoid } from 'nanoid';
 import { Form, Input, Label, Button} from './ContactForm.styled';
-import { useAddContactMutation, useGetContactsQuery } from 'services/phonebookApi';
+import { useAddContactMutation, useGetContactsQuery } from '../../services/phonebookApi';
 
 
 const ContactForm = () => {

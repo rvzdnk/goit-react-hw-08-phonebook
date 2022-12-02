@@ -1,10 +1,10 @@
 import React from 'react';
-import { useSignupMutation } from 'services/phonebookApi';
+import { useSignupMutation } from '../../services/phonebookApi';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Cookies from 'js-cookie';
-import { addToken } from 'redux/Actions';
+import { addToken } from '../../redux/Actions';
 import { RegistrationForm } from './Registration.styled';
 
 const Registration = () => {
