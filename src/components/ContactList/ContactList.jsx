@@ -1,5 +1,5 @@
-import Loader from './components/Loader/Loader';
-import ContactElement from './components/ContactElement/ContactElement';
+import Loader from '../Loader/Loader';
+import ContactElement from '../ContactElement/ContactElement';
 import { useSelector } from 'react-redux';
 import { useGetContactsQuery} from '../../services/phonebookApi';
 import {List, Message} from './ContactList.styled.js';

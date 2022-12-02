@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { phonebookApi } from './services/phonebookApi';
+import { phonebookApi } from '../services/phonebookApi';
 
 import { filterReducer, tokenReducer } from './Reducers';
 
